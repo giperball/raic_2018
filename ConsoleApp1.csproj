@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+	<GenerateProgramFile>false</GenerateProgramFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="venv\**" />
+    <Compile Remove="regressions\**" />
+    <Compile Remove="optimize_test\**" />
+    <Compile Remove="regression_current_build\**" />
+    <Compile Remove="render_strat\MyStrategy.cs" />
+    <Compile Remove="render_strat\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="venv\**" />
+    <EmbeddedResource Remove="regressions\**" />
+    <EmbeddedResource Remove="optimize_test\**" />
+    <EmbeddedResource Remove="regression_current_build\**" />
+    <EmbeddedResource Remove="render_strat\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="venv\**" />
+    <None Remove="regressions\**" />
+    <None Remove="optimize_test\**" />
+    <None Remove="regression_current_build\**" />
+    <None Remove="render_strat\**" />
+    <None Remove="render_dump.txt" />
+  </ItemGroup>
+
+</Project>
